@@ -1,0 +1,107 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>REVERIE Challenge</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="static/css/main.css" />
+    <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+        table td, table th
+        {
+            border: 1px solid #cad9ea;
+            text-align: left;
+            border-left-style:none;
+            border-right-style:none;
+            color: #666;
+            height: 15px;
+            padding: 0;
+        }
+        table thead th
+        {
+            background-color: #CCE8EB;
+            width: 100px;
+        }
+        table tr:nth-child(odd)
+        {
+            background: #fff;
+        }
+        table tr:nth-child(even)
+        {
+            background: #F5FAFA;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="header">
+  <div class="inner">
+    <a href="index.html" class="logo">REVERIE</a>
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="challenge.html">Challenge</a>
+      <a href="dataset.html">Dataset</a>
+      <a href="people.html">People</a>
+    </nav>
+  </div>
+</header>
+<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+<!-- Main -->
+<section id="main" >
+  <div class="inner">
+    <header class="major special">
+      <h2 class='subtitle' >REVERIE Dataset</h2>
+    </header>
+        <p>REVERIE is a large-scale remote object grounding dataset introduced in <a href="https://arxiv.org/abs/1904.10151">REVERIE: Remote Embodied Visual Referring Expression in Real Indoor Environments (CVPR 2020)</a>.
+        It comprises 10,318 panoramas within 86 buildings containing 4,140 target objects, and 21,702 crowd-sourced instructions with an average length of 18 words. The table below shows sample instructions from our dataset, which illustrate various linguistic phenomena, such as spatial relations, dangling modifiers, and coreferences</p>
+        <table width="90%" class="table">
+            <tr><td>1. Fold the towel in the bathroom with the fishing theme. </td></tr>
+			<tr><td>2. Enter the bedroom with the letter E over the bed and turn the light switch off. </td></tr>
+			<tr><td>3. Go to the blue family room and bring the framed picture of a person on a horse at the top left  corner above the TV.  </td></tr>
+			<tr><td>4. Push in the bar chair, in the kitchen, by the oven. </td></tr>
+			<tr><td>5. Windex the mirror above the sink, in the bedroom with the large, stone fireplace.  </td></tr>
+			<tr><td>6. Could you please dust the light above the toilet in the bathroom that is near the entry way?  </td></tr>
+			<tr><td>7. At the top of the stairs, the first set of potted flowers in front of the stairs need to be dusted off.  </td></tr>
+			<tr><td>8. To the right at the end of the hall, where the large blue table foot stool is, there is a mirror that needs to be wiped.  </td></tr>
+			<tr><td>9. Go to the hallway area where there are three pictures side by side and get me the one on the right.  </td></tr>
+			<tr><td>10. There is a bottle in the office alcove next to the piano. It is on the shelf above the sink on the extreme right. Please bring it here.   </td></tr>
+            <caption align="bottom" >
+                <b>Table 1. Instruction samples from the REVERIE dataset.</b>
+            </caption>
+        </table>
+      <p><b>Data Distribution</b> The left figure below displays the length distribution of the collected instructions, which shows that most instructions have 10~22 words while the shortest annotation could be only 3 words, such as 'Flush the toilet'. It also shows that 56% instructions mention 3 or more objects, 28% instructions mention 2 objects, and the remaining 15% instructions mention 1 object.
+
+The right figure below presents the relative amount of words used in instructions and the target object categories in the form of word cloud. It shows that people prefer 'go' for navigation, and most instructions involve 'bathroom'.
+There are 4,140 target objects in the dataset, falling into 489 categories, which are 6 times more than the 80 categories in ReferCOCO, a most popular referring expression dataset at present.
+      <div align="center" style="float:left;" ><img src="static/img/dist.jpg" alt="" width=55%/><img src="static/img/cloud.jpg" alt="" width=45%/></div>
+      <p><b>Data Splits</b> We follow the same train/val/test split strategy as the R2R datasets.  The training set consists of 60 scenes and 10,466 instructions over 2,353 objects. The validation set including seen and unseen splits totally contains 56 scenes, 953 objects, and 4,944 instructions, of which 10 scenes and 3,521 instructions over 513 objects are reserved for val unseen split.  For the test set, we collect 6,292 instructions involving 834 objects randomly scattered in 16 scenes. All the test data are unseen during training and validation procedures.</p>
+  </div>
+</section>
+
+<section id='downloads'>
+    <div class="inner">
+        <header class="major special">
+            <h2 class='subtitle' >Downloads</h2>
+        </header>
+        <p>The downloads are available <a href="https://github.com/YuankaiQi/REVERIE">here</a>.</p>
+    </div>
+
+</section>
+
+
+<!-- Scripts -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/skel.min.js"></script>
+<script src="/static/js/util.js"></script>
+<script src="/static/js/main.js"></script>
+
+</body>
+</html>

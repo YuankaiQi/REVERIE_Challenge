@@ -1,0 +1,84 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>REVERIE Challenge</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="static/css/main.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header id="header">
+  <div class="inner">
+    <a href="index.html" class="logo">REVERIE</a>
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="challenge.html">Challenge</a>
+      <a href="dataset.html">Dataset</a>
+      <a href="people.html">People</a>
+    </nav>
+  </div>
+</header>
+<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+
+<!-- Main -->
+<section id="main" >
+  <div class="inner">
+    <header class="major special">
+      <h2 style='color:#0f4c8a' >Task Description</h2>
+    </header>
+    <div align="center"><img src="static/img/REVERIE_task.png" alt="" width=35% /></div>
+        <p>The REVERIE task requires an intelligent agent to correctly localise a remote target object (can not be observed at the starting location) specified by a concise high-level natural language instruction, such as 'Bring me the bottom picture that is next to the top of stairs on level one'. Since the target object is in a different location from the starting one, the agent needs first to navigate to the goal location. When the agent determines to stop, it should select one object from a list of candidates provided by the simulator. The agent can attempt to localise the target at any step, which is totally up to algorithm design. But we only allow the agent output once in each episode, which means the agent only can guess the answer once in a single run. In the above figure, the blue discs indicate nearby navigable viewpoints provided the simulator.</p>
+
+        <br>
+    </div>
+</section>
+
+
+<section id='guideline'>
+    <div class="inner">
+        <header class="major special">
+            <h2 style='color:#0f4c8a' >Challenge Guidelines</h2>
+        </header>
+        <br>
+        <h3 class='subtitle' ><li>Dataset Download</li></h3>
+        <p>Please refer to the details at the <a href="dataset.html">Dataset</a> page.</p>
+
+        <h3 class='subtitle' ><li>Submission</li></h3>
+        <p>The challenge is hosted at the EvalAI. Please go to the <a href="https://competitions.codalab.org/competitions/24108">challenge</a> page to submit your results.</p>
+
+        <h3 class='subtitle' ><li>Evaluation Metrics</li></h3>
+        <p>The primary evaluation metric for REVERIE is Remote grounding success rate weighted by path length (RGSPL). We also adopt four auxilary metrics to evaluate navigation performance so as to help diagnose performance bottleneck on navigation and visual grounding. Please note that these navigation metrics are slightly different from those in VLN.</p>
+        <p><b>Remote Grounding Success rate (RGS)</b>: It is the number of successful tasks over the total of tasks. A task is considered successful if the predicted object ID is the same as the ground truth.</p><br>
+        <p><b>Remote Grounding Success rate weighted by navigation Path Length (RGSPL)</b>: It trades-off RGS against path length.</p>
+        <p><b>Navigation Length (Nav-Length)</b>: Navigation path length in meters.</p><br>
+        <p><b>Navigation Success rate (Nav-Succ)</b>: A navigation is considered successful only if the target object can be observed at the stop viewpoint.</p>
+        <p><b>Navigation Oracle Success rate (Nav-OSucc)</b>: A navigation is considered oracle successful if the target object can be observed at one of its passed viewpoints.</p><br>
+        <p><b>Navigation Success rate weighted by Path Length (Nav-SPL)</b>: It is the navigation success weighted by the length of navigation path (see mathmathical definition here).</p>
+        <h3 class='subtitle' ><li>Requirements</li></h3>
+        <p>1. Participants should stick to the definition of training, validation and test partition in order to have a fair comparison of different approaches.</p>
+        <p>2. The Challenge is a team-based contest. Each team can have one or more members, and an individual cannot be a member of multiple teams. </p>
+        <br>
+        <p>3. Each team can make at most <b>five</b> submissions on test partition and the highest score is finally adopted. You can use val seen or val unseen partitions to test your submission format (10 trials per day). Our <a href="https://github.com/YuankaiQi/REVERIE">code</a> also includes evaluation for these two splits.</p>
+        <p>4. At the end of the Challenge, all teams will be ranked based on the evaluation described above. The top teams will receive award certificates.</p>
+        <br><br>
+        <h3 class='subtitle' ><li>Baseline Paper and Code</li></h3>
+        <p>The paper introducing the REVERIE Challenge baseline can be viewed <a href="https://arxiv.org/abs/1904.10151">here</a>.</p>
+        <p>The baseline codes and models are released <a href="https://github.com/YuankaiQi/REVERIE">here</a>.</p>
+    </div>
+</section>
+<br><br><br>
+
+
+<!-- Scripts -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/skel.min.js"></script>
+<script src="/static/js/util.js"></script>
+<script src="/static/js/main.js"></script>
+
+
+</body>
+</html>
