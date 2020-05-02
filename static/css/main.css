@@ -3173,7 +3173,7 @@
 			}
 
 			#header a:last-child {
-				padding-right: 0em;
+				/* padding-right: 0em; */
 			}
 
 			@media screen and (max-width: 736px) {
