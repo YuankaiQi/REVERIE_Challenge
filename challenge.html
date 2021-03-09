@@ -51,7 +51,7 @@
         <p>The challenge is hosted at the EvalAI. Please prepare your results as described <a href='https://github.com/YuankaiQi/REVERIE#7'>here</a> and go to the <a href="https://evalai.cloudcv.org/web/challenges/challenge-page/606/overview">challenge page</a> to submit.</p>
 
         <h3 class='subtitle' ><li>Evaluation Metrics</li></h3>
-        <p>The primary evaluation metric for REVERIE is Remote grounding success rate weighted by path length (RGSPL). We also adopt four auxilary metrics to evaluate navigation performance so as to help diagnose performance bottleneck on navigation and visual grounding. Please note that these navigation metrics are slightly different from those in VLN.</p>
+        <p>The primary evaluation metric for REVERIE is Remote Grounding Success rate weighted by Path Length (RGSPL). We also adopt four auxilary metrics to evaluate navigation performance so as to help diagnose performance bottleneck on navigation and visual grounding. Please note that these navigation metrics are slightly different from those in VLN. We reserve the right to use additional metrics to choose winners in case of statistically insignificant SPL differences.</p>
         <p><b>Remote Grounding Success rate (RGS)</b>: It is the number of successful tasks over the total of tasks. A task is considered successful if the predicted object ID is the same as the ground truth.</p><br>
         <p><b>Remote Grounding Success rate weighted by navigation Path Length (RGSPL)</b>: It trades-off RGS against path length.</p>
         <p><b>Navigation Length (Nav-Length)</b>: Navigation path length in meters.</p><br>
