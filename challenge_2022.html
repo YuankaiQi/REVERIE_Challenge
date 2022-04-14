@@ -1,0 +1,90 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>REVERIE Challenge</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="static/css/main.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header id="header">
+  <div class="inner">
+    <a href="index.html" class="logo">REVERIE</a>
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="challenge_2022.html" style="background:#FF0000; padding-top:17px; padding-bottom:17px";>Challenge</a>
+      <a href="people_2022.html">People</a>
+    </nav>
+  </div>
+</header>
+<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+
+<!-- Main -->
+<section id="main" >
+  <div class="inner">
+    <header class="major special">
+      <h2 style='color:#0f4c8a' >Task Description</h2>
+    </header>
+    <div align="center"><img src="static/img/demo.gif" alt="demo" width=35% /></div>
+        <p>The REVERIE task requires an intelligent agent to correctly localise a remote target object (can not be observed at the starting location) specified by a concise high-level natural language instruction, as shown by the demo above. Since the target object is in a different location from the starting one, the agent needs first to navigate to the goal location. When the agent determines to stop, it should select one object from a list of candidates provided by the simulator. The agent can attempt to localise the target at any step, which is totally up to algorithm design. But we only allow the agent output once in each episode, which means the agent only can guess the answer once in a single run. Please note that the interaction, such as 'check', with the target object is not required.</p>
+
+        <br>
+    </div>
+</section>
+
+
+<section id='guideline'>
+    <div class="inner">
+        <header class="major special">
+            <h2 style='color:#0f4c8a' >Challenge Guidelines</h2>
+        </header>
+        <br>
+        <h3 class='subtitle' ><li>Dataset Download</li></h3>
+        <p>Download the new version of data from <a href="https://github.com/YuankaiQi/REVERIE/tree/master/tasks/REVERIE/data_v2">here</a>.</p>
+
+
+
+        <h3 class='subtitle' ><li>Submission</li></h3>
+        <p>The challenge is hosted at the EvalAI. Please prepare your results as described <a href='https://github.com/YuankaiQi/REVERIE#7'>here</a> and go to the challenge page (to be released) to submit.</p>
+
+        <h3 class='subtitle' ><li>Evaluation Metrics</li></h3>
+        <p>The primary evaluation metric for REVERIE is Remote Grounding Success rate weighted by Path Length (RGSPL). We also adopt four auxilary metrics to evaluate navigation performance so as to help diagnose performance bottleneck on navigation and visual grounding. Please note that these navigation metrics are slightly different from those in VLN. We reserve the right to use additional metrics to choose winners in case of using different input data, statistically insignificant RGSPL differences, etc.</p>
+        <p><b>Remote Grounding Success rate (RGS)</b>: It is the number of successful tasks over the total of tasks. A task is considered successful if the predicted object ID is the same as the ground truth.</p><br>
+        <p><b>Remote Grounding Success rate weighted by navigation Path Length (RGSPL)</b>: It trades-off RGS against path length.</p>
+        <p><b>Navigation Length (Nav-Length)</b>: Navigation path length in meters.</p><br>
+        <p><b>Navigation Success rate (Nav-Succ)</b>: A navigation is considered successful only if the target object can be observed at the stop viewpoint.</p>
+        <p><b>Navigation Oracle Success rate (Nav-OSucc)</b>: A navigation is considered oracle successful if the target object can be observed at one of its passed viewpoints.</p><br>
+        <p><b>Navigation Success rate weighted by Path Length (Nav-SPL)</b>: It is the navigation success weighted by the length of navigation path (see mathmathical definition here).</p>
+        <h3 class='subtitle' ><li>Requirements</li></h3>
+        <p>Besides the rules stated on the home page, below are some additional rules:</p>
+        <p>1. Participants should stick to the definition of training, validation and test partition in order to have a fair comparison of different approaches. <b>Note that</b> additional dataset can be used to train your model but we may take this into consideration when choosing winners.</p> </p><br>
+        <p>2. Each team can make at most <b>five</b> submissions on test partition and the highest score is finally adopted. You can use val seen or val unseen partitions to test your submission format (10 trials per day). The demo code also includes evaluation on validation splits.</p>
+        <p>3. At the end of the Challenge, all teams will be ranked based on the evaluation described above. The top teams will receive award certificates.</p>
+        <br><br>
+        <h3 class='subtitle' ><li>How to start?</li></h3>
+        <!--<p>The paper introducing the REVERIE Challenge baseline can be viewed <a href="https://arxiv.org/abs/1904.10151">here</a>.</p>-->
+        <p>If this is a new task for you, we recommend to first read this <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Qi_REVERIE_Remote_Embodied_Visual_Referring_Expression_in_Real_Indoor_Environments_CVPR_2020_paper.pdf">paper</a> for details. Then you can start from several existing works, such as:
+            <a href="https://github.com/YanyuanQiao/HOP-REVERIE-Challenge">Baseline</a>,
+        <a href="https://github.com/YicongHong/Recurrent-VLN-BERT">RecurrentBERT</a>,
+            <a href="https://github.com/YuankaiQi/ORIST">ORIST</a>,
+            <a href="https://github.com/alloldman/CKR">CKR</a>,
+            <a href="https://github.com/airbert-vln/airbert">AirBERT</a>, etc. <b>Note</b> that all these works use the original data instead of the new data released in this year challenge.</p>
+        <p>Finally, the REVERIE task is based on Matterport 3D dataset and its simulator, you can download and build the running environment as described <a href="'https://github.com/peteanderson80/Matterport3DSimulator">here</a>.</p><br><br>
+    </div>
+</section>
+<br>
+
+
+<!-- Scripts -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/skel.min.js"></script>
+<script src="/static/js/util.js"></script>
+<script src="/static/js/main.js"></script>
+
+
+</body>
+</html>
