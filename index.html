@@ -15,6 +15,7 @@
     <nav id="nav">
       <a href="" style="background:#FF0000; padding-top:17px; padding-bottom:17px">Home</a>
       <a href="challenge_2022.html">Challenge</a>
+      <a href="leaderboard.html">Leaderboard</a>
       <a href="people_2022.html" >People</a>
     </nav>
   </div>
@@ -28,7 +29,7 @@
     <h1 style="color:#0f4c8a">REVERIE Challenge @ CSIG 2022 </h1>
     <h2 style="color:#0f4c8a">New data, New channel, New rules! </h2>
     <h2 style="color:#0f4c8a">Total Prizes: 200,000RMB (~31,500USD) supported by SK Group, South Korean</h2>
-    <h3 style="color:darkred">Note: this website will be kept updating during the challenge.</h3>
+    <h3 style="color:red">Update 21/04/2022: (1) Submision method is changed. See the "Submission" section on the <a href="challenge_2022.html">Challenge</a> page. (2) The referring expression grounding model for channel 1 is released. See the "Channel" section on the <a href="challenge_2022.html">Challenge</a> page.</h3>
   </div>
 </section>
 
@@ -51,12 +52,12 @@ Moreover, compared to the task of Referring Expression (RefExp) that selects the
   <div class="inner">
     <h3 class='subtitle'>New data, New channel, New rules</h3>
     <b>&middot;New data:</b> <br> Instead of only considering objects within 3 meters to the viewpoint, in this challenge ALL visible objects are considered for object grounding. <br>
-    <b>&middot;New channel:</b> <br> This year we set two channels: one using our referring expression grounding model (to be released),
-    and the other one using your own referring expression grounding model.<br>
+    <b>&middot;New channel:</b> <br> This year we set two channels: Channel 1 uses our referring expression grounding model <a href="https://github.com/zhaoc5/Grounding-REVERIE-Challenge">here</a>,
+    and Channel 2 uses your own referring expression grounding model.<br>
     <b>&middot;New rules:</b>
     <ol>
       <li>For each channel, one participant can only be in one team. Each team can have at most six members.</li>
-      <li>Submitted results must be immediately visible on the leaderboard. When you have multiple submissions, you must set the best results visible.</li>
+      <li>Send your results on test split to reverie.challenge@gmail.com, and we will evaluate the results for you. You can submit only 5 times totally for the challenge. We provide an evaluation script <a href="https://github.com/YanyuanQiao/HOP-REVERIE-Challenge/blob/main/r2r_src/eval.py">here</a> for self-evaluation on val_seen and val_unseen splits. </li>
       <li>Technical report must be sent to reverie.challenge@gmail.com before the challenge deadline. A template will be provided. </li>
       <li>Results must be better than our baseline (to be released).</li>
       <li>Refer to the <a href="challenge_2022.html" > Challenge</a> page for more details.</li>

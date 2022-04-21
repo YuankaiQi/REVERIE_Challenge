@@ -16,6 +16,7 @@
     <nav id="nav">
       <a href="index.html">Home</a>
       <a href="challenge_2022.html" style="background:#FF0000; padding-top:17px; padding-bottom:17px";>Challenge</a>
+        <a href="leaderboard.html">Leaderboard</a>
       <a href="people_2022.html">People</a>
     </nav>
   </div>
@@ -46,10 +47,13 @@
         <h3 class='subtitle' ><li>Dataset Download</li></h3>
         <p>Download the new version of data from <a href="https://github.com/YuankaiQi/REVERIE/tree/master/tasks/REVERIE/data_v2">here</a>.</p>
 
+        <h3 class='subtitle' id="channel"><li>Channels</li></h3>
+        <p>Channel 1: using our referring expression grounding model. See <a href="https://github.com/zhaoc5/Grounding-REVERIE-Challenge">here</a>.   for more details.</p>
+        <p>Channel 2: using your own refeering expression grounding model. See the <a href="https://github.com/YanyuanQiao/HOP-REVERIE-Challenge">baseline</a> example. </p> <br><br>
 
 
-        <h3 class='subtitle' ><li>Submission</li></h3>
-        <p>The challenge is hosted at the EvalAI. Please prepare your results as described <a href='https://github.com/YuankaiQi/REVERIE#7'>here</a> and go to the challenge page (to be released) to submit.</p>
+        <h3 class='subtitle' id="submission"><li>Submission</li></h3>
+        <p>Send your results on test split to reverie.challenge@gmail.com, and we will evaluate the results for you. You can submit only 5 times totally for the challenge (your best result will be considered for the competition).  We provide an evaluation script <a href="https://github.com/YanyuanQiao/HOP-REVERIE-Challenge/blob/main/r2r_src/eval.py">here</a> for yourself evaluation on val_seen and val_unseen splits. When sending us the result file, please include the following information in the email body: team name, team member. Using suffix "_ch1" in the file name to indicate the channel using our referrfing expression grounding model, and "_ch2" for your own grounding model. The technical report should be sent before the submission deadline.</p>
 
         <h3 class='subtitle' ><li>Evaluation Metrics</li></h3>
         <p>The primary evaluation metric for REVERIE is Remote Grounding Success rate weighted by Path Length (RGSPL). We also adopt four auxilary metrics to evaluate navigation performance so as to help diagnose performance bottleneck on navigation and visual grounding. Please note that these navigation metrics are slightly different from those in VLN. We reserve the right to use additional metrics to choose winners in case of using different input data, statistically insignificant RGSPL differences, etc.</p>
@@ -59,10 +63,12 @@
         <p><b>Navigation Success rate (Nav-Succ)</b>: A navigation is considered successful only if the target object can be observed at the stop viewpoint.</p>
         <p><b>Navigation Oracle Success rate (Nav-OSucc)</b>: A navigation is considered oracle successful if the target object can be observed at one of its passed viewpoints.</p><br>
         <p><b>Navigation Success rate weighted by Path Length (Nav-SPL)</b>: It is the navigation success weighted by the length of navigation path (see mathmathical definition here).</p>
+
+
         <h3 class='subtitle' ><li>Requirements</li></h3>
         <p>Besides the rules stated on the home page, below are some additional rules:</p>
         <p>1. Participants should stick to the definition of training, validation and test partition in order to have a fair comparison of different approaches. <b>Note that</b> additional dataset can be used to train your model but we may take this into consideration when choosing winners.</p> </p><br>
-        <p>2. Each team can make at most <b>five</b> submissions on test partition and the highest score is finally adopted. You can use val seen or val unseen partitions to test your submission format (10 trials per day). The demo code also includes evaluation on validation splits.</p>
+        <p>2. Each team can make at most <b>five</b> submissions on test partition and the highest score is finally adopted.  The demo code also includes evaluation on validation splits.</p>
         <p>3. At the end of the Challenge, all teams will be ranked based on the evaluation described above. The top teams will receive award certificates.</p>
         <br><br>
         <h3 class='subtitle' ><li>How to start?</li></h3>
@@ -72,7 +78,7 @@
         <a href="https://github.com/YicongHong/Recurrent-VLN-BERT">RecurrentBERT</a>,
             <a href="https://github.com/YuankaiQi/ORIST">ORIST</a>,
             <a href="https://github.com/alloldman/CKR">CKR</a>,
-            <a href="https://github.com/airbert-vln/airbert">AirBERT</a>, etc. <b>Note</b> that all these works use the original data instead of the new data released in this year challenge.</p>
+            <a href="https://github.com/airbert-vln/airbert">AirBERT</a>, etc. <b>Note</b> that all these works (except the baseline) use the original data instead of the new data released in this year challenge.</p>
         <p>Finally, the REVERIE task is based on Matterport 3D dataset and its simulator, you can download and build the running environment as described <a href="'https://github.com/peteanderson80/Matterport3DSimulator">here</a>.</p><br><br>
     </div>
 </section>

@@ -1,0 +1,88 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>REVERIE Challenge</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="static/css/main.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header id="header">
+  <div class="inner">
+    <a href="index.html" class="logo">REVERIE</a>
+    <nav id="nav">
+      <a href="index.html">Home</a>
+        <a href="challenge_2022.html">Challenge</a>
+        <a href="leaderboard.html" style="background:#FF0000; padding-top:17px; padding-bottom:17px";>Leaderboard</a>
+      <a href="people_2022.html">People</a>
+    </nav>
+  </div>
+    <style type="text/css">
+        table
+        {
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+        table td, table th
+        {
+            border: 1px solid #cad9ea;
+            text-align: center;
+            border-left-style:none;
+            border-right-style:none;
+            color: #666;
+            height: 15px;
+            padding: 0;
+        }
+        table thead th
+        {
+            background-color: #CCE8EB;
+            width: 100px;
+        }
+        table tr:nth-child(odd)
+        {
+            background: #fff;
+        }
+        table tr:nth-child(even)
+        {
+            background: #F5FAFA;
+        }
+    </style>
+</header>
+<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+<!-- Main -->
+<section id="main" >
+  <div class="inner">
+    <header class="major special">
+      <h2>Leaderboard</h2>
+    </header>
+    </div>
+</section>
+
+
+
+<section>
+    <div class="inner">
+
+        <table width="90%" class="table">
+            <tr><td>Team</td><td>Nav-Succ</td><td>Nav-OSucc</td><td>Nav-SPL</td><td>Nav-Length</td><td>RGS</td><td>RGSPL</td></tr>
+            <tr><td>Baseline_Ch1</td><td>14.44</td><td>38.67</td><td>9.02</td><td>23.6</td><td>3.47</td><td>2.18</td></tr>
+            <tr><td>Baseline_Ch2</td><td>14.44</td><td>38.67</td><td>9.02</td><td>23.6</td><td>4.9</td><td>3.1</td></tr>
+        </table>
+        <p><b>Note</b>: Both baselines use <a href="https://github.com/YanyuanQiao/HOP-REVERIE-Challenge">HOP</a> for navigation but use different methods for referring expression grounding.</p>
+    </div>
+</section>
+
+
+<!-- Scripts -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/skel.min.js"></script>
+<script src="/static/js/util.js"></script>
+<script src="/static/js/main.js"></script>
+
+</body>
+</html>
