@@ -6,6 +6,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="static/css/main.css" />
+
 </head>
 <body>
 
@@ -30,10 +31,7 @@
     <header class="major special">
       <h2 style='color:#0f4c8a' >Task Description</h2>
     </header>
-    <div align="center"><img src="static/img/demo.gif" alt="demo" width=35% /></div>
-        <p>The REVERIE task requires an intelligent agent to correctly localise a remote target object (can not be observed at the starting location) specified by a concise high-level natural language instruction, as shown by the demo above. Since the target object is in a different location from the starting one, the agent needs first to navigate to the goal location. When the agent determines to stop, it should select one object from a list of candidates provided by the simulator. The agent can attempt to localise the target at any step, which is totally up to algorithm design. But we only allow the agent output once in each episode, which means the agent only can guess the answer once in a single run. Please note that the interaction, such as 'check', with the target object is not required.</p>
-
-        <br>
+        <p>The REVERIE task requires an intelligent agent to correctly localise a remote target object (can not be observed at the starting location) specified by a concise high-level natural language instruction. Since the target object is in a different location from the starting one, the agent needs first to navigate to the goal location. When the agent determines to stop, it should select one object from a list of candidates provided by the simulator. The agent can attempt to localise the target at any step, which is totally up to algorithm design. But we only allow the agent output once in each episode, which means the agent only can guess the answer once in a single run. Please note that the interaction, such as 'check', with the target object is not required.</p>
     </div>
 </section>
 
@@ -71,10 +69,12 @@
         <p>2. Each team can make at most <b>five</b> submissions on test partition and the highest score is finally adopted.  The demo code also includes evaluation on validation splits.</p>
         <p>3. At the end of the Challenge, all teams will be ranked based on the evaluation described above. The top teams will receive award certificates.</p>
         <br><br>
+
+
         <h3 class='subtitle' ><li>How to start?</li></h3>
         <!--<p>The paper introducing the REVERIE Challenge baseline can be viewed <a href="https://arxiv.org/abs/1904.10151">here</a>.</p>-->
         <p>If this is a new task for you, we recommend to first read this <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Qi_REVERIE_Remote_Embodied_Visual_Referring_Expression_in_Real_Indoor_Environments_CVPR_2020_paper.pdf">paper</a> for details. Then you can start from several existing works, such as:
-            <a href="https://github.com/YanyuanQiao/HOP-REVERIE-Challenge">Baseline</a>,
+            <a href="https://github.com/YanyuanQiao/HOP-REVERIE-Challenge">Baseline (HOP)</a>,
         <a href="https://github.com/YicongHong/Recurrent-VLN-BERT">RecurrentBERT</a>,
             <a href="https://github.com/YuankaiQi/ORIST">ORIST</a>,
             <a href="https://github.com/alloldman/CKR">CKR</a>,
