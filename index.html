@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="static/css/main.css" />
   <style>
+    .space {
+      height:15px;
+      overflow: hidden;
+    }
     .crop {
       overflow: hidden;
     }
@@ -51,6 +55,7 @@
   <div class="inner">
     <h3 class='subtitle'>Introduction</h3>
     <div align="center" class="crop"><img src="static/img/demo.gif" alt="demo" width=35% /></div>
+    <div class="space"></div>
     <p>The objective of REVERIE Challenge is to benchmark the state-of-the-art for the remote object grounding task defined in the <a href="https://arxiv.org/abs/1904.10151">paper</a>, in the hope that it might drive progress towards more flexible and powerful human interactions with robots. The REVERIE task requires an intelligent agent to correctly localise a remote target object (can not be observed at the starting location) specified by a concise high-level natural language instruction, such as 'bring me the blue cushion from the sofa in the living room'. In distinction to other embodied tasks such as Vision-and-Language Navigation (VLN) and Embodied Question Answering (EQA), REVERIE evaluates the success based on explicit object grounding rather than the point navigation in VLN or the question answering in EQA. This more clearly reflects the necessity of robots' capability of natural language understanding, visual navigation, and object grounding. More importantly, the concise instructions in REVERIE represent more practical tasks that humans would ask a robot to perform. Those high-level instructions fundamentally differ from the fine-grained visuomotor instructions in VLN, and would empower high-level reasoning and real-world applications.
 Moreover, compared to the task of Referring Expression (RefExp) that selects the desired object from a single image, REVERIE is far more challenging in the sense that the target object is not visible in the initial view and needs to be discovered by actively navigating in the environment. Hence, in REVERIE, there are at least an order of magnitude more object candidates to choose from.</p>
        </div>
